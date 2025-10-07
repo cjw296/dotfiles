@@ -105,7 +105,6 @@
 (set-scroll-bar-mode `right) 
 
 (require 'crontab)
-(require 'flymake-pyflakes)
 (require 'flymake-cursor)
 (put 'upcase-region 'disabled nil)
 
