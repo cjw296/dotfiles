@@ -1,0 +1,36 @@
+format = """($time$all
+)$status$character"""
+
+[character]
+format = '\$ '
+success_symbol = '[✓](bold green)'
+error_symbol = '[✗](bold red)'
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+
+[line_break]
+disabled = true
+
+[status]
+disabled = false
+format = '[$symbol$status]($style) '
+symbol = '✗:'
+success_symbol = ''      # empty means “don’t show on exit 0”
+style = 'bold red'
+map_symbol = false       # show raw numeric status, not mapped symbol
+
+[git_commit]
+only_detached = false
+
+[git_metrics]
+disabled = false
+
+[package]
+disabled = true
+
+[time]
+disabled = false
+format = '[$time]($style): '
+time_format = '%a %H:%M'

@@ -1,0 +1,38 @@
+source "$HOME/.cargo/env"
+
+# no brew by default..
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/chris/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/chris/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/chris/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/chris/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Added by Toolbox App
+export PATH="$PATH:/usr/local/bin"
+
+# Add docker bin path:
+export PATH=$PATH:~/.docker/bin
+
+if [ -f ~/.git-completion.zsh ]; then
+  . ~/.git-completion.zsh
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.local/bin/env"
+
+eval "$(starship init zsh)"

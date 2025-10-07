@@ -1,0 +1,10 @@
+.#*
+.DS_Store
+*.pyc
+*.tgz
+*.tar.gz
+.idea
+/.Python
+/bin
+/include
+/lib
